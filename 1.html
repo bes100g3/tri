@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Linguistic Encyclopedia</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- App Name Header -->
+  <header class="app-header">
+    <h1>Linguistic Encyclopedia</h1>
+  </header>
+  
+  <!-- Navigation Bar -->
+  <nav class="navigation-bar">
+    <ul>
+      <li><a href="#dictionary">Dictionary</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#authors">Authors</a></li>
+    </ul>
+  </nav>
+  
+  <div class="app-container">
+    <!-- Dictionary Section (Left) -->
+    <div class="dictionary-section" id="dictionary">
+      <h2>Welcome to the Linguistic Encyclopedia</h2>
+      <p>Enter a word to find its <strong>meaning</strong>.</p>
+      
+      <div class="input-container">
+        <input type="text" id="wordInput" placeholder="Enter a word">
+        <button onclick="getDefinition()">Define</button>
+      </div>
+      
+      <div class="result" id="result"></div>
+    </div>
+
+    <!-- Notes/Favorites Section (Right) -->
+    <div class="favorites-section">
+      <h2>Favorite Words & Notes</h2>
+      <div class="favorites-input">
+        <input type="text" id="favoriteWordInput" placeholder="Favorite word">
+        <textarea id="favoriteNoteInput" placeholder="Add a note"></textarea>
+        <button onclick="addFavorite()">Add to Favorites</button>
+      </div>
+      <div id="favoritesList"></div>
+    </div>
+  </div>
+  
+  <script src="script.js"></script>
+</body>
+</html>
